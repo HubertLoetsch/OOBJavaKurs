@@ -53,7 +53,6 @@ public class Car {
         this.fuelCapacity = fuelCapacity;
     }
 
-    @Override
     public String toString() {
         return "Car" +
                 "fuelConsumption=" + fuelConsumption +
@@ -64,13 +63,12 @@ public class Car {
                 ", color='" + color + '\'' +
                 "";
     }
-    // String getSerielNumber();
-
-
 
 }
 
-    /* Konstruktor
+
+    /*
+    Konstruktor
       public Car(int fuelConsumption,String brand, String serielNumber){
         this.fuelConsumption = fuelConsumption;
         this.brand = brand;

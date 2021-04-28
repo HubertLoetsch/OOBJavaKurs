@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public class main {
 
     public static void main(String[] args) {
@@ -23,8 +21,6 @@ public class main {
 
         //Mit toString gibt es alles aus
         System.out.println(c4.toString());
-
-
 
         /*
         Car c1 = new Car();

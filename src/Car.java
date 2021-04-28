@@ -1,7 +1,8 @@
 public class Car {
 
-        private int fuelConsumption; //Kraftstoffverbrauch
-        private String serielNumber; //serienNummer
+    private Engine engine;
+    private int fuelConsumption; //Kraftstoffverbrauch
+    private String serielNumber; //serienNummer
     private int fuelAmount;  //RestTank
     private int fuelCapacity;    //kapazitet
     private String brand;    //Marke
@@ -53,6 +54,14 @@ public class Car {
         this.fuelCapacity = fuelCapacity;
     }
 
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
     public String toString() {
         return "Car" +
                 "fuelConsumption=" + fuelConsumption +
@@ -63,6 +72,8 @@ public class Car {
                 ", color='" + color + '\'' +
                 "";
     }
+
+
 
 }
 

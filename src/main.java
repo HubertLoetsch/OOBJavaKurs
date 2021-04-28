@@ -2,6 +2,8 @@ public class main {
 
     public static void main(String[] args) {
 
+        Engine e1 = new Engine(140, Engine.TYPE.DIESEL);
+
         //Konstruktor
         Car c4 = new Car();
         c4.setFuelConsumption(5);
@@ -21,6 +23,9 @@ public class main {
 
         //Mit toString gibt es alles aus
         System.out.println(c4.toString());
+
+        c4.setEngine(e1);
+        System.out.println(c4.getEngine());
 
         /*
         Car c1 = new Car();

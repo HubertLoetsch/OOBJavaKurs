@@ -1,55 +1,140 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car {
 
+    //Author Hubert
+    //Version 0.5
     private Engine engine;
-    private int fuelConsumption; //Kraftstoffverbrauch
+    private List<RearMirror> mirrors;
+    private List<Tires> tires;
+    public int fuelConsumption; //Kraftstoffverbrauch
     private String serielNumber; //serienNummer
-    private int fuelAmount;  //RestTank
-    private int fuelCapacity;    //kapazitet
+    public int gasintank;  //RestTank
+    public int fuelCapacity;    //kapazitet
     private String brand;    //Marke
     private String color;    //Farbe
+    private int honkCounter;
+
 
     //Konstruktor With Pflichtfelder
-/*
-    public Car (String brand,String color, int fuelAmount,int fuelCapacit ){
+    public Car(Engine engine, String brand, String color, String serielNumber) {
+        this.engine = engine;
         this.brand = brand;
         this.color = color;
-        this.fuelAmount = fuelAmount;
-        this.fuelCapacity = fuelCapacit;
-        }
+        this.serielNumber = serielNumber;
+        this.mirrors = new ArrayList<>();
+        this.tires = new ArrayList<>();
+    }
+
+/*
+    //Ausgabe nach Main
+    public String toString() {
+        return "Car" +
+                "fuelConsumption=" + fuelConsumption + ", serielNumber='" + serielNumber + '\'' +
+                ", GasinTank=" + gasintank + ", fuelCapacity=" + fuelCapacity + ", brand='" + brand + '\'' +
+                ", color='" + color + '\'' + ", Power=" + engine.getHorsePower() + "ps";
+                    }
  */
+
+    //AddMirror
+    public void addMirror(RearMirror rearMirror) {
+        this.mirrors.add(rearMirror);
+    }
+
+    public List<RearMirror> getMirrors() {
+        return mirrors;
+    }
+
+    //Reifen Tires
+    public void addTires(Tires tires){
+        this.tires.add(tires);
+    }
+    public List<Tires> getTires(){
+        return tires;
+    }
+
+
+    //Consturktor
+    public Car() {
+        this.engine = engine;
+    }
+
+
+    //Honk = Hupen
+    public void honk() {
+        this.honkCounter++;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Getter and Setter
     public String getColor() {
         return color;
     }
-    public void setColor (String color){
+
+    public void setColor(String color) {
         this.color = color;
     }
-    public String getBrand(){
+
+    public String getBrand() {
         return brand;
     }
-    public void setBrand(String brand){
+
+    public void setBrand(String brand) {
         this.brand = brand;
     }
+
     public int getFuelConsumption() {
         return fuelConsumption;
     }
+
     public void setFuelConsumption(int fuelConsumption) {
         this.fuelConsumption = fuelConsumption;
     }
+
     public String getSerielNumber() {
         return serielNumber;
     }
+
     public void setSerielNumber(String serielNumber) {
         this.serielNumber = serielNumber;
     }
+
     public int getFuelAmount() {
-        return fuelAmount;
+        return gasintank;
     }
+
     public void setFuelAmount(int fuelAmount) {
-        this.fuelAmount = fuelAmount;
+        this.gasintank = fuelAmount;
     }
+
     public int getFuelCapacity() {
         return fuelCapacity;
     }
+
     public void setFuelCapacity(int fuelCapacity) {
         this.fuelCapacity = fuelCapacity;
     }
@@ -62,19 +147,14 @@ public class Car {
         this.engine = engine;
     }
 
-    public String toString() {
-        return "Car" +
-                "fuelConsumption=" + fuelConsumption +
-                ", serielNumber='" + serielNumber + '\'' +
-                ", fuelAmount=" + fuelAmount +
-                ", fuelCapacity=" + fuelCapacity +
-                ", brand='" + brand + '\'' +
-                ", color='" + color + '\'' +
-                "";
+    public int getHonkCounter() {
+        return honkCounter;
     }
 
-
-
+    public boolean setHonkCounter(int honkCounter) {
+        this.honkCounter = honkCounter;
+        return false;
+    }
 }
 
 
